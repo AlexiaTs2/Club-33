@@ -1,108 +1,98 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: url('background.jpg') center/cover no-repeat fixed;
+    font-family: 'Lora', serif;
+    background: url('/Images/DjanamBackground.jpeg') center/cover no-repeat fixed;
     color: #fff;
 }
 
-/* Навигационен бар */
 .navbar {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(5px);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 10px 0;
 }
 
-/* Лого и линкове */
 .navbar-brand {
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: #ffc107;
+    font-size: 1.8rem;
+    color: #e84a5f;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    font-family: 'Lora', serif;
 }
 
-.navbar-nav .nav-link {
+.navbar-brand img {
+    margin-right: 10px;
+    max-height: 50px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
     color: #fff;
     margin: 0 15px;
     transition: color 0.3s ease;
 }
 
-.navbar-nav .nav-link:hover {
-    color: #ffc107;
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #e84a5f;
 }
 
-.jumbotron {
-    padding: 5rem 0;
-    background-image: url('skyclub-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    background-size: cover;
-    background-position: center;
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    padding: 100px 20px;
+    text-align: center;
+    border-radius: 10px;
     color: #fff;
-    text-align: center;
+    position: relative;
 }
 
-.jumbotron h1 {
+.hero h1 {
     font-size: 4rem;
-    margin-bottom: 2rem;
+    margin-bottom: 20px;
 }
 
-.jumbotron p {
+.hero p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: #e84a5f;
+    border-color: #e84a5f;
+    padding: 15px 30px;
     font-size: 1.5rem;
-    margin-bottom: 3rem;
 }
 
-.container h2 {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
+.btn-primary:hover {
+    background-color: #c33d4f;
+    border-color: #c33d4f;
+}
+.events-section {
+background: rgba(0, 0, 0, 0.7);
+padding: 50px 0;
+text-align: center;
+border-radius: 10px;
 }
 
-.container .row .col-md-4 {
-    text-align: center;
-    padding: 2rem 0;
+.events-section h2 {
+    color: #e84a5f;
+    margin-bottom: 40px;
 }
 
-.container .row .col-md-4 i {
-    color: #ff9900;
-    margin-bottom: 1rem;
+.event-card {
+
+background: rgba(255, 255, 255, 0.1);
+padding: 20px;
+margin-bottom: 20px;
+border-radius: 10px;
+transition: transform 0.3s ease;
 }
 
-.container .row .col-md-4 h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+.event-card:hover {
+transform: scale(1.05);
 }
 
-.container .row .col-md-4 p {
-    font-size: 1.1rem;
-    margin-bottom: 0;
-}
-
-.blockquote {
-    border-left: 2px solid #ff9900;
-    padding-left: 2rem;
-    margin-bottom: 3rem;
-}
-
-.blockquote p {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-}
-
-.blockquote footer {
-    font-size: 1.1rem;
-    font-style: italic;
-    color: #666;
-}
-
-footer {
-    padding: 2rem 0;
-    background-color: #f8f9fa;
-}
-
-footer p {
-    font-size: 1.2rem;
-    margin-bottom: 0;
+.event-card img {
+border-radius: 10px;
+margin-bottom: 15px;
 }
