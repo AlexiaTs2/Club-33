@@ -1,0 +1,108 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: url('background.jpg') center/cover no-repeat fixed;
+    color: #fff;
+}
+
+/* Навигационен бар */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Лого и линкове */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #ffc107;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffc107;
+}
+
+.jumbotron {
+    padding: 5rem 0;
+    background-image: url('skyclub-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+}
+
+.jumbotron h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.jumbotron p {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.container .row .col-md-4 {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.container .row .col-md-4 i {
+    color: #ff9900;
+    margin-bottom: 1rem;
+}
+
+.container .row .col-md-4 h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.container .row .col-md-4 p {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+.blockquote {
+    border-left: 2px solid #ff9900;
+    padding-left: 2rem;
+    margin-bottom: 3rem;
+}
+
+.blockquote p {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.blockquote footer {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #666;
+}
+
+footer {
+    padding: 2rem 0;
+    background-color: #f8f9fa;
+}
+
+footer p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
