@@ -4,145 +4,97 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Djanam Sky Club</title>
+<link rel="icon" type="image/x-icon" href="../Images/DjanamLogo.jfif">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap">
+
+<link rel="stylesheet" href="galleryStyle.css">
 <style>
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Lora', serif;
-    background: url('../Images/DjanamBackground.jpeg') center/cover no-repeat fixed;
-    color: #fff;
-}
-
-.navbar {
-    background-color: rgba(0, 0, 0, 0.8);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    padding: 10px 0;
-}
-
-.navbar-brand {
-    font-size: 1.8rem;
-    color: #e84a5f;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-}
-
-.navbar-brand img {
-    margin-right: 10px;
-    max-height: 50px;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-    color: #fff;
-    margin: 0 15px;
-    font-weight: bold;
-}
-
-.navbar-dark .navbar-nav .nav-link:hover {
-    color: #e84a5f;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-}
-
-.gallery-item {
-    width: calc(33.33% - 20px);
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.gallery-item img {
-    width: 100%; /* Променихме тук */
-    max-width: 600px; /* Добавихме тази линия, за да ограничим максималната ширина */
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.gallery-item img:hover {
-    transform: scale(1.05);
-}
-
-.image-text {
-    margin-top: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.footer {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    font-weight: bold;
-}
 </style>
 </head>
 <body>
-
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="#">
-            <img src="../Images/DjanamLogo2.svg" alt="Djanam Logo">
-            Djanam Sky Club
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Начало</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Галерия</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Резервация</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Вход</a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/IndexPage/index.html">
+                <img src="/Images/DjanamLogo2.svg" alt="Djanam Logo">
+                Djanam Sky Club
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/IndexPage/index.html">Начало</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Gallery/gallery.html">Галерия</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Reservation/reservation.html">Резервация</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/LoginPage/login.html">Вход</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
-
+    </nav>
+    <section class="hero">
+        <div class="dark-overlay"></div>
 <div class="gallery">
     <div class="gallery-item">
-        <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid rounded" alt="Image 1">
-        <div class="image-text">Текст 1</div>
+        <img src="/Images/Lobby1.jpg" alt="Tattoo 1">
     </div>
     <div class="gallery-item">
-        <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid rounded" alt="Image 2">
-        <div class="image-text">Текст 2</div>
+        <img src="/Images/Lobby3.jpg" alt="Tattoo 1">
     </div>
     <div class="gallery-item">
-        <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid rounded" alt="Image 3">
-        <div class="image-text">Текст 3</div>
+        <img src="/Images/Lobby2.jpg" alt="Tattoo 1">
     </div>
     <div class="gallery-item">
-        <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid rounded" alt="Image 3">
-        <div class="image-text">Текст 3</div>
+        <img src="/Images/Lobby4.jpg" alt="Tattoo 1">
     </div>
     <div class="gallery-item">
-        <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid rounded" alt="Image 3">
-        <div class="image-text">Текст 3</div>
+        <img src="/Images/ChefResat.jpg" alt="Tattoo 1">
     </div>
     <div class="gallery-item">
-        <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid rounded" alt="Image 3">
-        <div class="image-text">Текст 3</div>
+        <img src="/Images/Food2.jpg" alt="Tattoo 1">
     </div>
-    <!-- Add more gallery items as needed -->
+    <div class="gallery-item">
+        <img src="/Images/Food.jpg" alt="Tattoo 1">
+    </div>
+    <div class="gallery-item">
+        <img src="/Images/Food3.jpg" alt="Tattoo 1">
+    </div>
+    <div class="gallery-item">
+        <img src="/Images/Food4.jpg" alt="Tattoo 1">
+    </div>
+    <div class="gallery-item">
+        <img src="/Images/Coffee.jpg" alt="Tattoo 1">
+    </div>
+    <div class="gallery-item">
+        <img src="/Images/Bar.jpg" alt="Tattoo 1">
+    </div>
+    <div class="gallery-item">
+        <img src="/Images/Love.jpg" alt="Tattoo 1">
+    </div>
+    <div class="gallery-item">
+        <img src="/Images/BalletNova2.jpg" alt="Tattoo 1">
+    </div>
+    <div class="gallery-item">
+        <img src="/Images/BalletNova3.jpg" alt="Tattoo 1">
+    </div>
+    <div class="gallery-item">
+        <img src="/Images/BalletNova.jpg" alt="Tattoo 1">
+    </div>
+    <div class="gallery-item">
+        <img src="/Images/BalletNova4.jpg" alt="Tattoo 1">
+    </div>
+    <!-- Добавете още галерии по същия начин -->
 </div>
-
+</section>
 <div class="footer">
     <p>&copy; 2024 Djanam Sky Club. Всички права запазени.</p>
 </div>
