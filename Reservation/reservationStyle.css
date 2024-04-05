@@ -49,6 +49,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     text-align: center; /* Center-align the content in the form container */
+    padding-top: 80px; /* Подреждане на контейнера под навигационното меню */
 }
 
 .booking-form form {
