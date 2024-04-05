@@ -75,12 +75,11 @@ border-radius: 10px;
 }
 
 .events-section h2 {
-    color: #e84a5f;
+    color:#e84a5f ;
     margin-bottom: 40px;
 }
 
 .event-card {
-
 background: rgba(255, 255, 255, 0.1);
 padding: 20px;
 margin-bottom: 20px;
