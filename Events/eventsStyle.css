@@ -40,7 +40,6 @@ body {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
     padding: 90px 20px;
     text-align: center;
-    border-radius: 10px;
     color: #fff;
     position: relative;
 }
@@ -49,7 +48,6 @@ body {
     background: rgba(0, 0, 0, 0.7);
     padding: 50px 0;
     text-align: center;
-    border-radius: 10px;
 }
 
 .events-section h2 {
