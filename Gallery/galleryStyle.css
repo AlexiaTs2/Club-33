@@ -82,11 +82,3 @@ body {
     transform: scale(1.05);
 }
 
-
-.footer {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    font-weight: bold;
-}

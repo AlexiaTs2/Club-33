@@ -18,7 +18,7 @@
     <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="../IndexPage/index.html">
+            <a class="navbar-brand" href="../IndexPage/index.php">
                 <img src="../Images/DjanamLogo2.svg" alt="Djanam Logo">
                 Djanam Sky Club
             </a>
@@ -28,16 +28,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="../IndexPage/index.html">Начало</a>
+                        <a class="nav-link active" href="../IndexPage/index.php">Начало</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../Gallery/gallery.html">Галерия</a>
+                        <a class="nav-link" href="../Gallery/gallery.php">Галерия</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../Reservation/reservation.html">Резервация</a>
+                        <a class="nav-link" href="../Reservation/reservation.php">Резервация</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../LoginPage/login.html">Вход</a>
+                        <a class="nav-link" href="../LoginPage/login.php">Вход</a>
                     </li>
                 </ul>
             </div>
@@ -57,7 +57,7 @@
     <!-- Секция със събития -->
     <div class="events-section">
         <div class="container">
-            <a href="../Events/events.html" style="text-decoration: none;">
+            <a href="../Events/events.php" style="text-decoration: none;">
                 <h2>↠ Бъдещи събития ↞</h2>
             </a>
             <div class="row">
@@ -92,9 +92,8 @@
         </div>
     </div>
  <!-- Footer section -->
- <div class="footer">
-    <p>&copy; 2024 Djanam Sky Club. Всички права запазени.</p>
-</div>
+ <?php include '../Footer/footer.html'; ?>
+
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-wuslBqJUYvdF95LMOi8ftJ7nMz7ZCkMZov3UexNjth5cwwEBH5mGwl0tG2d0zTqE" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-EzFjo0aJ6IhUZ7KE/PIfZ3FXk4IkTCuhN/t6EAoXxWkDFZCsqdgL5drJz7fehphh" crossorigin="anonymous"></script>
 </body>

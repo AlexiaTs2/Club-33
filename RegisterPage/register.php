@@ -10,16 +10,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap">
-    <link rel="stylesheet" href="../Reservation/reservationStyle.css">
-    <title>Резервация за маса | Djanam Sky Club</title>
+    <link rel="stylesheet" href="../RegisterPage/registerStyle.css">
+    <title>Регистрация | Djanam Sky Club</title>
 </head>
 <body>
-    
-      <!-- Навигационно меню -->
-      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="../IndexPage/index.html">
-                <img src="../Images/DjanamLogo2.svg" alt="Djanam Лого">
+                <img src="../Images/DjanamLogo2.svg" alt="Djanam Logo">
                 Djanam Sky Club
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,38 +43,38 @@
         </div>
     </nav>
 
-    <div class="dark-overlay">
+    <section class="hero">
+        <div class="dark-overlay"></div>
         <div class="form-container">
             <form>
-                <h3>Резервация за маса</h3>
+                <h3>Регистрация</h3>
 
                 <div class="inputbox">
-                    <input type="text" placeholder="Вашето име" id="name">
+                    <ion-icon name="person-outline"></ion-icon>
+                    <input type="text" placeholder="Име" id="name">
                 </div>
 
                 <div class="inputbox">
-                    <input type="tel" placeholder="Телефонен номер" id="phone">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input type="email" placeholder="Email" id="email">
                 </div>
 
                 <div class="inputbox">
-                    <input type="number" placeholder="Брой хора" id="people">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input type="password" placeholder="Парола" id="password">
                 </div>
-
-                <div class="inputbox">
-                    <input type="date" id="date">
+                <button>Регистрирай се</button>
+                <div class="login-link">
+                    <p>Вече имате профил? <a href="../LoginPage/login.php">Вход</a></p>
                 </div>
-
-                <div class="inputbox">
-                    <input type="time" id="time">
-                </div>
-
-                <button>Резервирай маса</button>
             </form>
         </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-wuslBqJUYvdF95LMOi8ftJ7nMz7ZCkMZov3UexNjth5cwwEBH5mGwl0tG2d0zTqE" crossorigin="anonymous"></script>
+    </section>
+ <!-- Footer section -->
+ <?php include '../Footer/footer.html'; ?>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-wuslBqJUYvdF95LMOi8ftJ7nMz7ZCkMZov3UexNjth5cwwEBH5mGwl0tG2d0zTqE" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-EzFjo0aJ6IhUZ7KE/PIfZ3FXk4IkTCuhN/t6EAoXxWkDFZCsqdgL5drJz7fehphh" crossorigin="anonymous"></script>
 </body>
-
 </html>
-
