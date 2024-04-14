@@ -11,11 +11,12 @@
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap">
     <link rel="stylesheet" href="../RegisterPage/registerStyle.css">
+    <?php include '../RegisterPage/registerFunction.php'; ?>
     <title>Регистрация | Djanam Sky Club</title>
 </head>
 <body>
     <!-- Navigation bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+       <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="../IndexPage/index.html">
                 <img src="../Images/DjanamLogo2.svg" alt="Djanam Logo">
@@ -41,29 +42,29 @@
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav>   
 
     <section class="hero">
         <div class="dark-overlay"></div>
         <div class="form-container">
-            <form>
+            <form action="register.php" method="post">
                 <h3>Регистрация</h3>
 
                 <div class="inputbox">
                     <ion-icon name="person-outline"></ion-icon>
-                    <input type="text" placeholder="Име" id="name">
+                    <input type="text" placeholder="Име" name="username">
                 </div>
 
                 <div class="inputbox">
                     <ion-icon name="mail-outline"></ion-icon>
-                    <input type="email" placeholder="Email" id="email">
+                    <input type="email" placeholder="Имейл" name="email">
                 </div>
 
                 <div class="inputbox">
                     <ion-icon name="lock-closed-outline"></ion-icon>
-                    <input type="password" placeholder="Парола" id="password">
+                    <input type="password" placeholder="Парола" name="password">
                 </div>
-                <button>Регистрирай се</button>
+                <button type="submit" name="submit">Регистрирай се</button>
                 <div class="login-link">
                     <p>Вече имате профил? <a href="../LoginPage/login.php">Вход</a></p>
                 </div>

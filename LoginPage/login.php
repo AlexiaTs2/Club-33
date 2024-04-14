@@ -11,6 +11,7 @@
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap">
     <link rel="stylesheet" href="../LoginPage/loginStyle.css">
+    <?php include 'loginFunction.php'; ?>
     <title>Логин | Djanam Sky Club</title>
 </head>
 <body>
@@ -41,30 +42,26 @@
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav> 
 
     <section class="hero">
         <div class="dark-overlay"></div>
         <div class="form-container">
-            <form>
+            <form action="login.php" method="post">
                 <h3>Вход</h3>
-                <div class="inputbox">
-                    <ion-icon name="person-outline"></ion-icon> 
-                    <input type="text" placeholder="Потребителско име" id="username"> 
-                </div>
-                <div class="inputbox">
-                    <ion-icon name="mail-outline"></ion-icon>
-                    <input type="email" placeholder="Email" id="email">
-                </div>
+        
+            <div class="inputbox"><ion-icon name="person-outline"></ion-icon>
+                <input type="text" placeholder="Име" name="username" id="username">
+            </div>
 
-                <div class="inputbox">
-                    <ion-icon name="lock-closed-outline"></ion-icon>
-                    <input type="password" placeholder="Password" id="password">
-                </div>
+            <div class="inputbox"><ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password" placeholder="Парола" name="password" id="password">
+            </div>
 
-                <button>Влез</button>
+
+                <button name="submit">Влез</button>
                 <div class="register-link">
-                    <p>Нямате профил? <a href="../RegisterPage/register.html">Регистрация</a></p>
+                    <p>Нямате профил? <a href="../RegisterPage/register.php">Регистрация</a></p>
                 </div>
             </form>
         </div>
