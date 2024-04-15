@@ -1,4 +1,8 @@
+
 <?php
+
+  session_start();  
+
     $servername = "localhost";
     $username = "root";
     $password = "1234";
@@ -15,10 +19,12 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
 
+
         $sql = $connection->prepare("
-          SELECT * 
-          FROM user 
-          WHERE Name = ?
+          SELECT u.*, ur.RoleID 
+          FROM user u
+          LEFT JOIN user_role ur ON ur.UserID = u.id  
+          WHERE u.name = ?
         "); 
         $sql->execute([$username]); 
         $user = $sql->fetch();
@@ -34,4 +40,4 @@
             echo "<script type='text/javascript'>alert('$message');</script>";
         } 
     }
-?>
+     ?>
