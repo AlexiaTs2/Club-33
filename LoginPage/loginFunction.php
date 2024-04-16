@@ -19,7 +19,6 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-
         $sql = $connection->prepare("
           SELECT u.*, ur.RoleID 
           FROM user u
