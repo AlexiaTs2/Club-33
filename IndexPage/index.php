@@ -11,6 +11,7 @@
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap">
     <link rel="stylesheet" href="../IndexPage/indexStyle.css">
+
 </head>
 <body>
     <!-- Navigation bar -->
@@ -40,7 +41,7 @@
                 </ul>
             </div>
         </div>
-    </nav> 
+    </nav>  
 
     <!-- Hero section -->
     <header class="hero">
