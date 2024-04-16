@@ -15,32 +15,32 @@
 <body>
     <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="../IndexPage/index.php">
-                    <img src="../Images/DjanamLogo2.svg" alt="Djanam Logo">
-                    Djanam Sky Club
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="../IndexPage/index.php">Начало</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../Gallery/gallery.php">Галерия</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../Reservation/reservation.php">Резервация</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../LoginPage/login.php">Вход</a>
-                        </li>
-                    </ul>
-                </div>
+        <div class="container">
+            <a class="navbar-brand" href="../IndexPage/index.php">
+                <img src="../Images/DjanamLogo2.svg" alt="Djanam Logo">
+                Djanam Sky Club
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../IndexPage/index.php">Начало</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Gallery/gallery.php">Галерия</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Reservation/reservation.php">Резервация</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../LoginPage/login.php">Вход</a>
+                    </li>
+                </ul>
             </div>
-        </nav> 
+        </div>
+    </nav> 
 
     <!-- Hero section -->
     <header class="hero">
@@ -63,7 +63,7 @@
                         <img src="../Images/Event1.jpg" class="card-img-top" alt="Event 1">
                         <div class="card-body">
                             <h5 class="card-title">Гръцка вечер</h5>
-                            <p class="card-text">Насладете се на вълнуващагръцка музика и атмосфера през четвъртък вечер!</p>
+                            <p class="card-text">Насладете се на вълнуваща гръцка музика и атмосфера през четвъртък вечер!</p>
                         </div>
                     </div>
                 </div>
