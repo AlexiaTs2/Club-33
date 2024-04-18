@@ -1,8 +1,4 @@
-
 <?php
-
-  session_start();  
-
     $servername = "localhost";
     $username = "root";
     $password = "1234";
@@ -11,10 +7,11 @@
     try {
       $connection = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
       $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      echo "Connected successfully";
+      //echo "Connected successfully";
     } catch(PDOException $e) {
       echo "Connection failed: " . $e->getMessage();
     }
+    session_start();  
     if ( isset( $_POST['submit'] ) ) {
         $username = $_POST['username'];
         $password = $_POST['password'];

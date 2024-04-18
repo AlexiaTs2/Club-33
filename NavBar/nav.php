@@ -1,25 +1,24 @@
-
-
 <!DOCTYPE html>
 <html lang="bg">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="../Images/DjanamLogo.jfif">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap JS bundle (including Popper.js) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap">
-    <link rel="stylesheet" href="../Reservation/reservationStyle.css">
-    <?php include '../Reservation/reservationFunction.php'; ?>
-    <title>Резервация за маса | Djanam Sky Club</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Начало | Djanam Sky Club</title>
+
+<link rel="icon" type="image/x-icon" href="../Images/DjanamLogo.jfif">
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap JS bundle (including Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap">
+ <link rel="stylesheet" href="../NavBar/navStyle.css"> 
+</head>
+    <title>Document</title>
 </head>
 <body>
-    
-      <!-- Навигационно меню -->
-      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <!-- Navigation bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
         <a class="navbar-brand" href="../IndexPage/index.php">
             <img src="../Images/DjanamLogo2.svg" alt="Djanam Logo">
@@ -58,39 +57,7 @@
         </div>
     </div>
 </nav>
-    <div class="dark-overlay">
-        <div class="form-container">
-            <form action="reservation.php" method="post">
-                <h3>Резервация за маса</h3>
-
-                <div class="inputbox">
-                    <input type="text" placeholder="Вашето име" id="name" name="name">
-                </div>
-
-                <div class="inputbox">
-                    <input type="tel" placeholder="Телефонен номер" id="phone"  name="phone">
-                </div>
-
-                <div class="inputbox">
-                    <input type="number" placeholder="Брой хора" id="people" name="people">
-                </div>
-
-                <div class="inputbox">
-                    <input type="date" id="date" name="date">
-                </div>
-
-                <div class="inputbox">
-                    <input type="time" id="time" name="time">
-                </div>
-
-                <button name="submit">Резервирай маса</button>
-            </form>
-        </div>
-    </div>
-   <!-- Footer section -->
-   <?php include '../Footer/footer.html'; ?> 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-wuslBqJUYvdF95LMOi8ftJ7nMz7ZCkMZov3UexNjth5cwwEBH5mGwl0tG2d0zTqE" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-EzFjo0aJ6IhUZ7KE/PIfZ3FXk4IkTCuhN/t6EAoXxWkDFZCsqdgL5drJz7fehphh" crossorigin="anonymous"></script>
 </body>
-
 </html>
