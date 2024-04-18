@@ -55,7 +55,7 @@
     <!-- Секция със събития -->
     <div class="events-section">
         <div class="container">
-            <a href="../Events/events.php" style="text-decoration: none;">
+            <a href="../Events/events.html" style="text-decoration: none;">
                 <h2>↠ Бъдещи събития ↞</h2>
             </a>
             <div class="row">

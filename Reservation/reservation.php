@@ -17,10 +17,10 @@
 <body>
     
       <!-- Навигационно меню -->
-       <!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="../IndexPage/index.html">
-                <img src="../Images/DjanamLogo2.svg" alt="Djanam Лого">
+            <a class="navbar-brand" href="../IndexPage/index.php">
+                <img src="../Images/DjanamLogo2.svg" alt="Djanam Logo">
                 Djanam Sky Club
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,21 +29,21 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="../IndexPage/index.html">Начало</a>
+                        <a class="nav-link active" href="../IndexPage/index.php">Начало</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../Gallery/gallery.html">Галерия</a>
+                        <a class="nav-link" href="../Gallery/gallery.php">Галерия</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../Reservation/reservation.html">Резервация</a>
+                        <a class="nav-link" href="../Reservation/reservation.php">Резервация</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../LoginPage/login.html">Вход</a>
+                        <a class="nav-link" href="../LoginPage/login.php">Вход</a>
                     </li>
                 </ul>
             </div>
         </div>
-    </nav>  -->
+    </nav>  
 
     <div class="dark-overlay">
         <div class="form-container">
