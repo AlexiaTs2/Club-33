@@ -1,59 +1,59 @@
 <?php
-session_start();
 
-// Connect to the MySQL database
+// Връзка с MySQL базата данни
 $servername = "localhost";
 $username = "root";
 $password = "1234";
 $database = "djanam";
+
+// Създаване на връзка с базата данни
 $conn = new mysqli($servername, $username, $password, $database);
 
-// Проверка за връзка с базата данни
+// Проверка на връзката
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Разрешение на идентификационния параметър ID от URL адреса
-$id = isset($_GET["ID"]) ? $_GET["ID"] : null;
-if ($id === null) {
-    echo "Missing ID parameter";
+// Извличане на ID на реда за редактиране от query string
+if(isset($_GET["id"])) {
+    $id = $_GET["id"];
+} else {
+    echo "Error: ID parameter is missing.";
     exit;
 }
 
-// Извличане на данни за потребителя от базата данни
-$sql = "SELECT name, role FROM user WHERE ID = ?";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("i", $id);
-$stmt->execute();
-$result = $stmt->get_result();
-$row = $result->fetch_assoc();
+// Извличане на данните за потребителя от таблицата user
+$sql_user = "SELECT name FROM user WHERE id = $id";
+$result_user = $conn->query($sql_user);
+$row_user = $result_user->fetch_assoc();
+$name = $row_user["name"];
 
-// Проверка за успешно извличане на данни
-if (!$row) {
-    echo "User not found";
-    exit;
-}
+// Извличане на ролята на потребителя от таблицата user_role
+$sql_role = "SELECT RoleID FROM user_role WHERE UserID = $id";
+$result_role = $conn->query($sql_role);
+$row_role = $result_role->fetch_assoc();
+$role_id = isset($row_role["RoleID"]) ? $row_role["RoleID"] : 1; // Ако RoleID не е дефиниран, задайте му стойност 1 по подразбиране
 
-// Инициализация на променливите с данните за потребителя
-$name = $row["name"];
-$role = $row["role"];
-
-// Обработка на формата при изпращане
+// Обработка на изпращането на формата
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Вземане на данните от формата
+    // Получаване на актуализираните данни от формата
     $name = $_POST["name"];
-    $role = $_POST["role"];
+    $role_id = $_POST["role_id"];
 
-    // Обновяване на данните в базата данни
-    $sql = "UPDATE user SET name=?, role=? WHERE ID=?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sii", $name, $role, $id);
-    if ($stmt->execute()) {
-        // Пренасочване към страницата с потребителите
-        header("Location: Panel.php");
-        exit;
+    // Актуализация на данните в таблицата user
+    $sql_update_user = "UPDATE user SET name='$name' WHERE id=$id";
+    if ($conn->query($sql_update_user) === TRUE) {
+        // Актуализация на ролята в таблицата user_role
+        $sql_update_role = "UPDATE user_role SET RoleID=$role_id WHERE UserID=$id";
+        if ($conn->query($sql_update_role) === TRUE) {
+            // Пренасочване към страницата с таблицата
+            header("Location:../AdminPanel/panel.php");
+            exit();
+        } else {
+            echo "Error updating user role: " . $conn->error;
+        }
     } else {
-        echo "Error updating user: " . $conn->error;
+        echo "Error updating user record: " . $conn->error;
     }
 }
 
@@ -61,6 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $conn->close();
 ?>
 
+<!-- Форма за редактиране -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,17 +71,23 @@ $conn->close();
 </head>
 <body>
 
-<h1>Edit User</h1>
-<form method="post">
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name" value="<?php echo $name; ?>"><br>
-    <label for="role">Role:</label><br>
-    <input type="radio" id="user" name="role" value="1" <?php echo ($role == 1) ? "checked" : ""; ?>>
-    <label for="user">User</label><br>
-    <input type="radio" id="admin" name="role" value="2" <?php echo ($role == 2) ? "checked" : ""; ?>>
-    <label for="admin">Admin</label><br>
-    <input type="submit" value="Save">
-</form>
+<!-- Форма за редактиране на потребителя -->
+<div>
+    <h1>Edit User</h1>
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) . "?id=$id"; ?>" method="post">
+        <label for="name">Name:</label><br>
+        <!-- Поле за въвеждане на името -->
+        <input type="text" name="name" id="name" value="<?php echo $name; ?>"><br><br>
+        <label for="role_id">Role:</label><br>
+        <!-- Поле за избор на роля -->
+        <select name="role_id" id="role_id">
+            <option value="1" <?php if ($role_id == 1) echo "selected"; ?>>User</option>
+            <option value="2" <?php if ($role_id == 2) echo "selected"; ?>>Admin</option>
+        </select><br><br>
+        <!-- Бутон за потвърждение на редакцията -->
+        <input type="submit" value="Update">
+    </form>
+</div>
 
 </body>
 </html>

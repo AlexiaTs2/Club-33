@@ -45,7 +45,7 @@ try {
         <tr>
             <td><?php echo $row['Name']; ?></td>
             <td><a href="Panel.php?id=<?php echo $row['ID']; ?>" class="buttondel">Delete</a></td>
-            <td><a href="editpage.php?id=<?php echo $row['ID']; ?>" class="buttonedit">Edit</a></td>
+            <td><a href="edit.php?id=<?php echo $row['ID']; ?>" class="buttonedit">Edit</a></td>
         </tr>
     <?php endforeach; ?>
 </table>
