@@ -1,4 +1,6 @@
 <?php
+
+// Връзка с MySQL базата данни
 $servername = "localhost";
 $username = "root";
 $password = "1234";
@@ -7,16 +9,16 @@ $database = "djanam";
 try {
     $connection = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
     $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-   // echo "Connected successfully!";
 } catch(PDOException $e) {
-   // echo "Connection failed: " . $e->getMessage();
+    echo "Connection failed: " . $e->getMessage();
 }
 
 if (isset($_POST['submit'])) {
 
     $username = $_POST['username'];
-    $password = $_POST['password'];
     $email = $_POST['email'];
+    $password = $_POST['password'];
+    
 
 
     $errors = [];
@@ -28,7 +30,6 @@ if (isset($_POST['submit'])) {
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errors[] = "Invalid email!";
     }
-
 
     // Password requirements:
     // - At least one uppercase letter
@@ -50,11 +51,25 @@ if (isset($_POST['submit'])) {
 
     if (!$errors) {
      
-		$hashedPassword = password_hash($password, PASSWORD_BCRYPT, ["cost" => 8]);
+        $hashedPassword = password_hash($password, PASSWORD_BCRYPT, ["cost" => 8]);
 
-        $sql = "INSERT INTO user (Name, Password, Email) VALUES (?,?,?)";
+        $sql = "INSERT INTO user (Name, Email, Password) VALUES (?,?,?)";
         $pdoStatement = $connection->prepare($sql);
-        $pdoStatement->execute([$username, $hashedPassword, $email]);
+        // Bind parameters to prevent SQL injection
+$pdoStatement->bindParam(1, $username, PDO::PARAM_STR);
+$pdoStatement->bindParam(2, $email, PDO::PARAM_STR);
+$pdoStatement->bindParam(3, $hashedPassword, PDO::PARAM_STR);
+
+    
+        // Execute the statement
+        $pdoStatement->execute();
+
+        // Automatically insert the user as a regular user into the user_role table
+        $userId = $connection->lastInsertId();
+        $defaultRoleId = 1; // Assuming '1' is the ID for regular users
+        $sqlUserRole = "INSERT INTO user_role (RoleID, UserID) VALUES (?, ?)";
+        $pdoStatementUserRole = $connection->prepare($sqlUserRole);
+        $pdoStatementUserRole->execute([$defaultRoleId, $userId]);
 
         header("Location: http://localhost/FinalProject/LoginPage/login.php");
         exit();

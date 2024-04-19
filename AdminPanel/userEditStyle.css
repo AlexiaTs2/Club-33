@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora', serif;
+    background: url('../Images/DjanamBackground.jpeg') center/cover no-repeat fixed; 
+}
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 10px 0;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+    max-height: 40px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #e84a5f;
+}
+
+.btn-outline-light {
+    color: #e84a5f; /* Цвят на текста на бутона */
+    border-color: #e84a5f; /* Цвят на границата на бутона */
+}
+
+.btn-outline-light:hover {
+    background-color: #e84a5f; /* Цвят на фона при ховър на бутона */
+    color: #fff; /* Цвят на текста при ховър на бутона */
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    text-align: center; /* Добавен стил */
+}
+
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Adjust the opacity as needed */
+}
+/* Стилове за таблицата */
+.table-container {
+    margin-top: 20px; /* Отстояние отгоре на таблицата */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Сянка за контейнера на таблицата */
+    border-radius: 10px; /* Закръгленост на контейнера на таблицата */
+    overflow-x: auto; /* Позволява хоризонтално превъртане на таблицата при нужда */
+}
+
+.table {
+    background-color: #fff; /* Цвят на фона на таблицата */
+}
+
+.table th,
+.table td {
+    border: none; /* Премахва границите между клетките */
+    vertical-align: middle; /* Вертикално позициониране на текста в клетките */
+}
+
+.table th {
+    background-color: #f8f9fa; /* Цвят на фона на заглавието на таблицата */
+    border-bottom: 2px solid #dee2e6; /* Горна граница на заглавието на таблицата */
+    color: #495057; /* Цвят на текста на заглавието на таблицата */
+    font-weight: 500; /* Дебелина на шрифта на заглавието на таблицата */
+    text-transform: uppercase; /* Преобразува текста в заглавието на таблицата в главни букви */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05); /* Цвят на фона на четните редове */
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: rgba(0, 0, 0, 0.1); /* Цвят на фона на нечетните редове */
+}

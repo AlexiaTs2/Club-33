@@ -17,7 +17,8 @@
     <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="../IndexPage/index.php">
+    <a class="navbar-brand" href="../IndexPage/index.php">
+            <img src="../Images/DjanamLogo2.svg" alt="Djanam Logo">
             Djanam Sky Club
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +41,7 @@
                     if($_SESSION['user']['RoleID'] == 2) {
                         // Показване на администраторския панел в навигационния бар
                         echo '<li class="nav-item">
-                                <a class="nav-link" href="../AdminPanel/panel.php">Админ-панел</a>
+                                <a class="nav-link" href="../AdminPanel/adminPage.php">Админ-панел</a>
                               </li>';
                     }
                 }

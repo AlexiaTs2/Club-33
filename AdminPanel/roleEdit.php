@@ -23,10 +23,11 @@ if(isset($_GET["id"])) {
 }
 
 // Извличане на данните за потребителя от таблицата user
-$sql_user = "SELECT name FROM user WHERE id = $id";
+$sql_user = "SELECT name, email FROM user WHERE id = $id";
 $result_user = $conn->query($sql_user);
 $row_user = $result_user->fetch_assoc();
 $name = $row_user["name"];
+$email = $row_user["email"];
 
 // Извличане на ролята на потребителя от таблицата user_role
 $sql_role = "SELECT RoleID FROM user_role WHERE UserID = $id";
@@ -47,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql_update_role = "UPDATE user_role SET RoleID=$role_id WHERE UserID=$id";
         if ($conn->query($sql_update_role) === TRUE) {
             // Пренасочване към страницата с таблицата
-            header("Location:../AdminPanel/panel.php");
+            header("Location:../AdminPanel/adminPage.php");
             exit();
         } else {
             echo "Error updating user role: " . $conn->error;
@@ -76,8 +77,11 @@ $conn->close();
     <h1>Edit User</h1>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) . "?id=$id"; ?>" method="post">
         <label for="name">Name:</label><br>
-        <!-- Поле за въвеждане на името -->
-        <input type="text" name="name" id="name" value="<?php echo $name; ?>"><br><br>
+        <!-- Поле за въвеждане на името, с readonly атрибут -->
+        <input type="text" name="name" id="name" value="<?php echo $name; ?>" readonly><br><br>
+        <label for="email">Email:</label><br>
+<input type="text" name="email" id="email" value="<?php echo $email; ?>"><br><br>
+
         <label for="role_id">Role:</label><br>
         <!-- Поле за избор на роля -->
         <select name="role_id" id="role_id">
@@ -88,6 +92,7 @@ $conn->close();
         <input type="submit" value="Update">
     </form>
 </div>
+
 
 </body>
 </html>

@@ -1,4 +1,3 @@
-
 <?php
 
 $servername = "localhost";
@@ -26,7 +25,7 @@ if(isset($_GET['id'])) {
 
 // Изпълнение на заявката за извличане на записи от таблицата "reservation"
 try {
-    $PDOstatement = $connection->prepare('SELECT * FROM reservation');
+    $PDOstatement = $connection->prepare('SELECT ID, Name, Phone, People, Date, Time FROM reservation');
     $PDOstatement->execute();
     $result = $PDOstatement->fetchAll(PDO::FETCH_ASSOC);
 } catch(PDOException $e) {
@@ -37,15 +36,23 @@ try {
 
 <table border="1">
     <tr>
-        <th>Username</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>People</th>
+        <th>Date</th>
+        <th>Time</th>
         <th>Delete</th>
         <th>Edit</th>
     </tr>
     <?php foreach($result as $row): ?>
         <tr>
             <td><?php echo $row['Name']; ?></td>
-            <td><a href="Panel.php?id=<?php echo $row['ID']; ?>" class="buttondel">Delete</a></td>
-            <td><a href="edit.php?id=<?php echo $row['ID']; ?>" class="buttonedit">Edit</a></td>
+            <td><?php echo $row['Phone']; ?></td>
+            <td><?php echo $row['People']; ?></td>
+            <td><?php echo $row['Date']; ?></td>
+            <td><?php echo $row['Time']; ?></td>
+            <td><a href="adminPage.php?id=<?php echo $row['ID']; ?>" class="buttondel">Delete</a></td>
+            <td><a href="reservationEdit.php?id=<?php echo $row['ID']; ?>" class="buttonedit">Edit</a></td>
         </tr>
     <?php endforeach; ?>
 </table>
