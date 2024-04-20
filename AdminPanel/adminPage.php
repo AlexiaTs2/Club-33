@@ -28,7 +28,7 @@
 
     <!-- Button section -->
     <section class="hero">
-        <div class="dark-overlay"></div>
+        
         <div class="button-container">
             <button class="button" onclick="window.location.href='../AdminPanel/userEdit.php'">База с потребители</button>
             <button class="button" onclick="window.location.href='../AdminPanel/userReservation.php'">База с резерваций</button>

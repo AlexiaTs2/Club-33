@@ -64,6 +64,8 @@ try {
         </form>
     </div>
 </nav> 
+<section class="hero">
+
 <div class="container mt-5">
     <div class="table-container">
         <div class="table-responsive">
