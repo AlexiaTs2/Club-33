@@ -18,7 +18,7 @@
     <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="../IndexPage/index.php">
+    <a class="navbar-brand" href="../IndexPage/index.php">
             <img src="../Images/DjanamLogo2.svg" alt="Djanam Logo">
             Djanam Sky Club
         </a>
@@ -34,8 +34,19 @@
                     <a class="nav-link" href="../Gallery/gallery.php">Галерия</a>
                 </li>
                 <?php
-                    if(isset($_SESSION['user'])):
+             
+                // Проверка дали потребителят е логнат
+                if(isset($_SESSION['user'])) {
+                    // Проверка дали ролята на потребителя е администратор
+                    if($_SESSION['user']['RoleID'] == 2) {
+                        // Показване на администраторския панел в навигационния бар
+                        echo '<li class="nav-item">
+                                <a class="nav-link" href="../AdminPanel/adminPage.php">Админ-панел</a>
+                              </li>';
+                    }
+                }
                 ?>
+                <?php if(isset($_SESSION['user'])): ?>
                 <li class="nav-item">
                     <a class="nav-link" href="../Reservation/reservation.php">Резервация</a>
                 </li>
@@ -43,11 +54,11 @@
                     <a class="nav-link" href="#"><?php echo $_SESSION['user']['Name']; ?></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../LogOut/logout.php"> Изход</a>
+                    <a class="nav-link" href="../LogOut/logout.php">Изход</a>
                 </li>
                 <?php else: ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="../LoginPage/login.php"> Вход</a>
+                    <a class="nav-link" href="../LoginPage/login.php">Вход</a>
                 </li>
                 <?php endif; ?>
             </ul>

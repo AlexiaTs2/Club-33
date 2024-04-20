@@ -26,7 +26,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
                     <a class="nav-link active" href="../IndexPage/index.php">Начало</a>
                 </li>
@@ -34,9 +34,20 @@
                     <a class="nav-link" href="../Gallery/gallery.php">Галерия</a>
                 </li>
                 <?php
-                    session_start();
-                    if(isset($_SESSION['user'])):
+                // Стартиране на сесията
+                session_start();
+                // Проверка дали потребителят е логнат
+                if(isset($_SESSION['user'])) {
+                    // Проверка дали ролята на потребителя е администратор
+                    if($_SESSION['user']['RoleID'] == 2) {
+                        // Показване на администраторския панел в навигационния бар
+                        echo '<li class="nav-item">
+                                <a class="nav-link" href="../AdminPanel/adminPage.php">Админ-панел</a>
+                              </li>';
+                    }
+                }
                 ?>
+                <?php if(isset($_SESSION['user'])): ?>
                 <li class="nav-item">
                     <a class="nav-link" href="../Reservation/reservation.php">Резервация</a>
                 </li>
@@ -44,17 +55,18 @@
                     <a class="nav-link" href="#"><?php echo $_SESSION['user']['Name']; ?></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../LogOut/logout.php"> Изход</a>
+                    <a class="nav-link" href="../LogOut/logout.php">Изход</a>
                 </li>
                 <?php else: ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="../LoginPage/login.php"> Вход</a>
+                    <a class="nav-link" href="../LoginPage/login.php">Вход</a>
                 </li>
                 <?php endif; ?>
             </ul>
         </div>
     </div>
 </nav>
+
     <!-- Hero section -->
     <header class="hero">
         <div class="container">
