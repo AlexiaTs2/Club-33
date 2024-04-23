@@ -1,9 +1,9 @@
 <?php
 
 // Връзка с MySQL базата данни
-$servername = "localhost";
+$servername = "127.0.0.1";
 $username = "root";
-$password = "1234";
+$password = "AlexiaTs";
 $database = "djanam";
 
 try {
@@ -71,7 +71,7 @@ $pdoStatement->bindParam(3, $hashedPassword, PDO::PARAM_STR);
         $pdoStatementUserRole = $connection->prepare($sqlUserRole);
         $pdoStatementUserRole->execute([$defaultRoleId, $userId]);
 
-        header("Location: http://localhost/FinalProject/LoginPage/login.php");
+        header("Location:http://localhost/Djanam-Sky-Club/LoginPage/login.php");
         exit();
     } else {
         // Show error messages for invalid username or email

@@ -1,7 +1,7 @@
 <?php
-    $servername = "localhost";
+    $servername = "127.0.0.1";
     $username = "root";
-    $password = "1234";
+    $password = "AlexiaTs";
     $database = "djanam";
 
     try {
@@ -29,7 +29,7 @@
 
         {
           $_SESSION['user'] = $user;
-          header("Location: http://localhost/FinalProject/IndexPage/index.php");
+          header("Location: http://localhost/Djanam-Sky-Club/IndexPage/index.php");
             exit();
         }else{
             $message = "Username and/or Password incorrect.\\nTry again.";

@@ -9,7 +9,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap">
     
-    <link rel="icon" type="image/x-icon" href="../Images/DjanamLogo.jfif">
     <link rel="stylesheet" href="galleryStyle.css">
 </head>
 

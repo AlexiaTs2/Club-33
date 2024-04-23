@@ -1,9 +1,9 @@
 <?php
 
 // Връзка с MySQL базата данни
-$servername = "localhost";
+$servername = "127.0.0.1";
 $username = "root";
-$password = "1234";
+$password = "AlexiaTs";
 $database = "djanam";
 
 // Създаване на връзка с базата данни
