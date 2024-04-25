@@ -26,7 +26,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto" id="navbarNav">
                 <li class="nav-item">
                     <a class="nav-link active" href="../IndexPage/index.php">Начало</a>
                 </li>
@@ -62,10 +62,14 @@
                     <a class="nav-link" href="../LoginPage/login.php">Вход</a>
                 </li>
                 <?php endif; ?>
+                <!-- Добавяне на линк за контакти -->
+                <li class="nav-item">
+                    <a class="nav-link" href="../ContactPage/contact.php">Контакти</a>
+                </li>
             </ul>
         </div>
     </div>
-</nav>
+</nav> 
 
     <!-- Hero section -->
     <header class="hero">

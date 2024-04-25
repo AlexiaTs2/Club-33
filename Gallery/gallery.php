@@ -15,7 +15,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-    <a class="navbar-brand" href="../IndexPage/index.php">
+        <a class="navbar-brand" href="../IndexPage/index.php">
             <img src="../Images/DjanamLogo2.svg" alt="Djanam Logo">
             Djanam Sky Club
         </a>
@@ -59,11 +59,14 @@
                     <a class="nav-link" href="../LoginPage/login.php">Вход</a>
                 </li>
                 <?php endif; ?>
+                <!-- Добавяне на линк за контакти -->
+                <li class="nav-item">
+                    <a class="nav-link" href="../ContactPage/contact.php">Контакти</a>
+                </li>
             </ul>
         </div>
     </div>
-</nav>>
-</nav>
+</nav> 
     <section class="hero">
         <div class="dark-overlay"></div>
         <div class="container mt-5">

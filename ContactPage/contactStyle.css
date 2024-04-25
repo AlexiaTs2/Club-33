@@ -1,0 +1,133 @@
+/* Общи стилове */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora', serif;
+    background: url('../Images/DjanamBackground.jpeg') center/cover no-repeat fixed;
+    color: #fff;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 10px 0;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    color: #e84a5f;
+    display: flex;
+    align-items: center;
+    font-family: 'Lora', serif;
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+    max-height: 50px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #e84a5f;
+}
+
+/* Стилове за формата */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../Images/DjanamBackground.jpeg') center/cover no-repeat fixed;
+    color: #fff;
+}
+
+.form-container {
+    height: auto; /* промяна: автоматична височина */
+    width: 500px; /* промяна: увеличаване на широчината */
+    max-width: 90%; /* промяна: ограничаване на максималната широчина */
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 50px 35px;
+}
+
+form * {
+    font-family: 'Lora', serif;
+    color: #fff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+form h3 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 42px;
+    text-align: center;
+}
+
+.inputbox {
+    position: relative;
+    margin: 30px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.inputbox ion-icon {
+    color: #fff;
+    margin-right: 10px;
+}
+
+input,
+textarea {
+    flex: 1; /* промяна: разширява се за заемане на останалото пространство */
+    background-color: rgba(255, 255, 255, 0.01);
+    border-radius: 3px;
+    padding: 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+textarea {
+    height: 150px;
+    resize: none; /* промяна: забранява се промяната на размера */
+}
+
+::placeholder {
+    color: #e1e1e1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* промяна: placeholder не е кликателен */
+    left: 35px; /* промяна: отместване на ляво */
+}
+
+input:hover,
+textarea:hover {
+    outline: 2px solid #0001;
+}
+
+button {
+    margin-top: 50px;
+    width: 100%;
+    background-color: #e84a5f;
+    color: #fff;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
