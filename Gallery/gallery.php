@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 
 <head>
     <meta charset="UTF-8">
@@ -31,13 +31,9 @@
                     <a class="nav-link" href="../Gallery/gallery.php">Галерия</a>
                 </li>
                 <?php
-                // Стартиране на сесията
                 session_start();
-                // Проверка дали потребителят е логнат
                 if(isset($_SESSION['user'])) {
-                    // Проверка дали ролята на потребителя е администратор
                     if($_SESSION['user']['RoleID'] == 2) {
-                        // Показване на администраторския панел в навигационния бар
                         echo '<li class="nav-item">
                                 <a class="nav-link" href="../AdminPanel/adminPage.php">Админ-панел</a>
                               </li>';
@@ -59,7 +55,6 @@
                     <a class="nav-link" href="../LoginPage/login.php">Вход</a>
                 </li>
                 <?php endif; ?>
-                <!-- Добавяне на линк за контакти -->
                 <li class="nav-item">
                     <a class="nav-link" href="../ContactPage/contact.php">Контакти</a>
                 </li>
@@ -154,7 +149,6 @@
             </div>
         </div>
     </section>
-     <!-- Footer section -->
  <?php include '../Footer/footer.html'; ?>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

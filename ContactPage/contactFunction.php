@@ -9,7 +9,6 @@ require '../PHPmailer/src/SMTP.php';
 require '../PHPmailer/src/Exception.php';
 
 if(isset($_POST['submit'])){
-    // Подготвяме променливи със стойности от формата
     $name = $_POST['name'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
@@ -22,12 +21,11 @@ if(isset($_POST['submit'])){
         $mail->isSMTP();                       
         $mail->Host       = 'smtp.gmail.com';                     
         $mail->SMTPAuth   = true;                                   
-        $mail->Username   = '19202@uktc-bg.com';  // Променете със своя имейл адрес                 
-        $mail->Password   = 'wmgwitvipslyxtnm'; // Променете със своя парола                           
+        $mail->Username   = '19202@uktc-bg.com';                 
+        $mail->Password   = 'wmgwitvipslyxtnm';                        
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            
         $mail->Port       = 587;                                   
     
-        // Пропускане на верификацията на SSL сертификата
         $mail->SMTPOptions = array(
             'ssl' => array(
                 'verify_peer' => false,
@@ -36,13 +34,12 @@ if(isset($_POST['submit'])){
             )
         );
     
-        $mail->setFrom('from@example.com', 'Mailer');
+        $mail->setFrom('from@example.com', 'DjanamSkyClub');
      
         $mail->addAddress('19202@uktc-bg.com');
 
         $mail->isHTML(true);
         $mail->Subject = 'Subject:'.$subject;
-        // Генерираме тялото на имейла със стойностите от формата
         $mail->Body    = '<p>Име: '.$name.'</p><br>Имейл: '.$email.'<br>Телефон: '.$phone.'<br>Съобщение: '.$message.'<br>';
         $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
     

@@ -1,6 +1,5 @@
 <?php
 
-// Връзка с MySQL базата данни
 $servername = "127.0.0.1";
 $username = "root";
 $password = "AlexiaTs";
@@ -31,10 +30,6 @@ if (isset($_POST['submit'])) {
         $errors[] = "Invalid email!";
     }
 
-    // Password requirements:
-    // - At least one uppercase letter
-    // - At least one digit
-    // - Minimum length of 8 characters
     $pattern = "/^(?=.*\d)(?=.*[A-Z]).{8,}$/";
     if (!preg_match($pattern, $password)) {
         $errors[] = "Password must contain at least one uppercase letter and one digit, and be at least 8 characters long!";
@@ -55,18 +50,15 @@ if (isset($_POST['submit'])) {
 
         $sql = "INSERT INTO user (Name, Email, Password) VALUES (?,?,?)";
         $pdoStatement = $connection->prepare($sql);
-        // Bind parameters to prevent SQL injection
+        
 $pdoStatement->bindParam(1, $username, PDO::PARAM_STR);
 $pdoStatement->bindParam(2, $email, PDO::PARAM_STR);
 $pdoStatement->bindParam(3, $hashedPassword, PDO::PARAM_STR);
 
-    
-        // Execute the statement
         $pdoStatement->execute();
 
-        // Automatically insert the user as a regular user into the user_role table
         $userId = $connection->lastInsertId();
-        $defaultRoleId = 1; // Assuming '1' is the ID for regular users
+        $defaultRoleId = 1; 
         $sqlUserRole = "INSERT INTO user_role (RoleID, UserID) VALUES (?, ?)";
         $pdoStatementUserRole = $connection->prepare($sqlUserRole);
         $pdoStatementUserRole->execute([$defaultRoleId, $userId]);
@@ -74,7 +66,7 @@ $pdoStatement->bindParam(3, $hashedPassword, PDO::PARAM_STR);
         header("Location:http://localhost/Djanam-Sky-Club/LoginPage/login.php");
         exit();
     } else {
-        // Show error messages for invalid username or email
+       
         foreach ($errors as $error) {
             $message = $error . "\\nTry again.";
             echo "<script type='text/javascript'>alert('$message');</script>";

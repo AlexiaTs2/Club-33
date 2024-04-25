@@ -4,17 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Начало | Djanam Sky Club</title>
-
     <link rel="icon" type="image/x-icon" href="../Images/DjanamLogo.jfif">
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap">
     <link rel="stylesheet" href="../IndexPage/indexStyle.css">
 
 </head>
 <body>
-    <!-- Navigation bar -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
         <a class="navbar-brand" href="../IndexPage/index.php">
@@ -33,13 +29,9 @@
                     <a class="nav-link" href="../Gallery/gallery.php">Галерия</a>
                 </li>
                 <?php
-                // Стартиране на сесията
                 session_start();
-                // Проверка дали потребителят е логнат
                 if(isset($_SESSION['user'])) {
-                    // Проверка дали ролята на потребителя е администратор
                     if($_SESSION['user']['RoleID'] == 2) {
-                        // Показване на администраторския панел в навигационния бар
                         echo '<li class="nav-item">
                                 <a class="nav-link" href="../AdminPanel/adminPage.php">Админ-панел</a>
                               </li>';
@@ -61,7 +53,6 @@
                     <a class="nav-link" href="../LoginPage/login.php">Вход</a>
                 </li>
                 <?php endif; ?>
-                <!-- Добавяне на линк за контакти -->
                 <li class="nav-item">
                     <a class="nav-link" href="../ContactPage/contact.php">Контакти</a>
                 </li>
@@ -69,8 +60,6 @@
         </div>
     </div>
 </nav> 
-
-    <!-- Hero section -->
     <header class="hero">
         <div class="container">
             <h1 class="display-3">Добре дошли в Djanam Sky Club!</h1>
@@ -79,7 +68,6 @@
         </div>
     </header>
     
-    <!-- Секция със събития -->
     <div class="events-section">
         <div class="container">
             <a href="../Events/events.php" style="text-decoration: none;">
@@ -116,11 +104,8 @@
             </div>
         </div>
     </div>
-    
-    <!-- Footer section -->
     <?php include '../Footer/footer.html'; ?>
 
-    <!-- Bootstrap JS bundle (including Popper.js) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

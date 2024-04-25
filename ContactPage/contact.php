@@ -5,11 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Контакти | Djanam Sky Club</title>
     <link rel="icon" type="image/x-icon" href="../Images/DjanamLogo.jfif">
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap">
-     <!-- Ionicons -->
     <link rel="stylesheet" href="../ContactPage/contactStyle.css">
     <?php include 'contactFunction.php'; ?>
 </head>
@@ -32,13 +29,9 @@
                     <a class="nav-link" href="../Gallery/gallery.php">Галерия</a>
                 </li>
                 <?php
-                // Стартиране на сесията
                 session_start();
-                // Проверка дали потребителят е логнат
                 if(isset($_SESSION['user'])) {
-                    // Проверка дали ролята на потребителя е администратор
                     if($_SESSION['user']['RoleID'] == 2) {
-                        // Показване на администраторския панел в навигационния бар
                         echo '<li class="nav-item">
                                 <a class="nav-link" href="../AdminPanel/adminPage.php">Админ-панел</a>
                               </li>';
@@ -60,7 +53,6 @@
                     <a class="nav-link" href="../LoginPage/login.php">Вход</a>
                 </li>
                 <?php endif; ?>
-                <!-- Добавяне на линк за контакти -->
                 <li class="nav-item">
                     <a class="nav-link" href="../ContactPage/contact.php">Контакти</a>
                 </li>
@@ -95,24 +87,15 @@
             </form>
         </div>
     </section>
-
-    <!-- Footer section -->
     <?php include '../Footer/footer.html'; ?>
-
-    <!-- Икони -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-    <!-- Bootstrap Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-wuslBqJUYvdF95LMOi8ftJ7nMz7ZCkMZov3UexNjth5cwwEBH5mGwl0tG2d0zTqE"
         crossorigin="anonymous"></script>
-
-    <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
         integrity="sha384-EzFjo0aJ6IhUZ7KE/PIfZ3FXk4IkTCuhN/t6EAoXxWkDFZCsqdgL5drJz7fehphh"
         crossorigin="anonymous"></script>
-
 </body>
 
 </html>

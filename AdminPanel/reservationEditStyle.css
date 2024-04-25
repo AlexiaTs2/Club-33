@@ -33,7 +33,7 @@ body {
     align-items: center;
     min-height: 100vh;
     position: relative;
-    text-align: center; /* Добавен стил */
+    text-align: center; 
 }
 .form-container {
     width: 300px;

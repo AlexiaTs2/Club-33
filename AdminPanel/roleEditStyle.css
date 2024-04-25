@@ -33,7 +33,7 @@ body {
     align-items: center;
     min-height: 100vh;
     position: relative;
-    text-align: center; /* Добавен стил */
+    text-align: center; 
 }
 .form-container {
     width: 400px;
@@ -41,5 +41,5 @@ body {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 0 auto; /* Добавяне на margin: 0 auto; за центриране на формата хоризонтално */
+    margin: 0 auto; 
 }

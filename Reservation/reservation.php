@@ -6,19 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../Images/DjanamLogo.jfif">
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap JS bundle (including Popper.js) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap">
     <link rel="stylesheet" href="../Reservation/reservationStyle.css">
     <?php include '../Reservation/reservationFunction.php'; ?>
     <title>Резервация за маса | Djanam Sky Club</title>
 </head>
 <body>
-    
-      <!-- Навигационно меню -->
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
         <a class="navbar-brand" href="../IndexPage/index.php">
@@ -37,13 +32,9 @@
                     <a class="nav-link" href="../Gallery/gallery.php">Галерия</a>
                 </li>
                 <?php
-                // Стартиране на сесията
                 session_start();
-                // Проверка дали потребителят е логнат
                 if(isset($_SESSION['user'])) {
-                    // Проверка дали ролята на потребителя е администратор
                     if($_SESSION['user']['RoleID'] == 2) {
-                        // Показване на администраторския панел в навигационния бар
                         echo '<li class="nav-item">
                                 <a class="nav-link" href="../AdminPanel/adminPage.php">Админ-панел</a>
                               </li>';
@@ -65,7 +56,6 @@
                     <a class="nav-link" href="../LoginPage/login.php">Вход</a>
                 </li>
                 <?php endif; ?>
-                <!-- Добавяне на линк за контакти -->
                 <li class="nav-item">
                     <a class="nav-link" href="../ContactPage/contact.php">Контакти</a>
                 </li>
@@ -102,7 +92,6 @@
             </form>
         </div>
     </div>
-   <!-- Footer section -->
    <?php include '../Footer/footer.html'; ?> 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-wuslBqJUYvdF95LMOi8ftJ7nMz7ZCkMZov3UexNjth5cwwEBH5mGwl0tG2d0zTqE" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-EzFjo0aJ6IhUZ7KE/PIfZ3FXk4IkTCuhN/t6EAoXxWkDFZCsqdgL5drJz7fehphh" crossorigin="anonymous"></script>

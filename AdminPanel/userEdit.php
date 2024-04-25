@@ -11,16 +11,13 @@ try {
     echo "Connection failed: " . $e->getMessage();
 }
 
-// Проверка дали има заявка за изтриване на запис
 if(isset($_GET['id'])) {
     try {
         $delete_id = $_GET['id'];
         
-        // Изтриване на свързаните записи от таблицата user_role
         $sql_user_role = "DELETE FROM user_role WHERE UserID = ?";
         $connection->prepare($sql_user_role)->execute([$delete_id]);
         
-        // Изтриване на потребителя от таблицата user
         $sql_user = "DELETE FROM user WHERE ID = ?";
         $connection->prepare($sql_user)->execute([$delete_id]);
     } catch(PDOException $e) {
@@ -28,7 +25,6 @@ if(isset($_GET['id'])) {
     }
 }
 
-// Изпълнение на заявката за извличане на записи от таблицата "user"
 try {
     $PDOstatement = $connection->prepare('SELECT * FROM user');
     $PDOstatement->execute();
@@ -39,17 +35,15 @@ try {
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../Images/DjanamLogo.jfif">
-        <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Google Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap">
     <link rel="stylesheet" href="userEditStyle.css">
-    <title>Document</title>
+    <title>Редактиране на потребители | Djanam Sky Club</title>
 </head>
 <body>
  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
@@ -78,7 +72,6 @@ try {
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- PHP код за генериране на редове с данни от базата данни -->
                     <?php foreach($result as $row): ?>
                         <tr>
                             <td><?php echo $row['Name']; ?></td>

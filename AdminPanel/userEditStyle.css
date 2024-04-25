@@ -33,13 +33,13 @@ body {
 }
 
 .btn-outline-light {
-    color: #e84a5f; /* Цвят на текста на бутона */
-    border-color: #e84a5f; /* Цвят на границата на бутона */
+    color: #e84a5f; 
+    border-color: #e84a5f; 
 }
 
 .btn-outline-light:hover {
-    background-color: #e84a5f; /* Цвят на фона при ховър на бутона */
-    color: #fff; /* Цвят на текста при ховър на бутона */
+    background-color: #e84a5f; 
+    color: #fff; 
 }
 
 .hero {
@@ -48,35 +48,31 @@ body {
     align-items: center;
     min-height: 100vh;
     position: relative;
-    text-align: center; /* Добавен стил */
+    text-align: center; 
 }
 
-
-/* Стилове за таблицата */
-
-
 .table {
-    background-color: #fff; /* Цвят на фона на таблицата */
+    background-color: #fff; 
 }
 
 .table th,
 .table td {
-    border: none; /* Премахва границите между клетките */
-    vertical-align: middle; /* Вертикално позициониране на текста в клетките */
+    border: none; 
+    vertical-align: middle; 
 }
 
 .table th {
-    background-color: #f8f9fa; /* Цвят на фона на заглавието на таблицата */
-    border-bottom: 2px solid #dee2e6; /* Горна граница на заглавието на таблицата */
-    color: #495057; /* Цвят на текста на заглавието на таблицата */
-    font-weight: 500; /* Дебелина на шрифта на заглавието на таблицата */
-    text-transform: uppercase; /* Преобразува текста в заглавието на таблицата в главни букви */
+    background-color: #f8f9fa; 
+    border-bottom: 2px solid #dee2e6; 
+    color: #495057; 
+    font-weight: 500; 
+    text-transform: uppercase; 
 }
 
 .table-striped tbody tr:nth-of-type(odd) {
-    background-color: rgba(0, 0, 0, 0.05); /* Цвят на фона на четните редове */
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 .table-striped tbody tr:nth-of-type(even) {
-    background-color: rgba(0, 0, 0, 0.1); /* Цвят на фона на нечетните редове */
+    background-color: rgba(0, 0, 0, 0.1); 
 }

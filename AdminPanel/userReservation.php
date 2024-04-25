@@ -10,7 +10,6 @@ try {
     echo "Connection failed: " . $e->getMessage();
 }
 
-// Проверка дали има заявка за изтриване на запис
 if(isset($_GET['id'])) {
     try {
         $delete_id = $_GET['id'];
@@ -21,7 +20,6 @@ if(isset($_GET['id'])) {
     }
 }
 
-// Изпълнение на заявката за извличане на записи от таблицата "reservation"
 try {
     $PDOstatement = $connection->prepare('SELECT ID, Name, Phone, People, Date, Time FROM reservation');
     $PDOstatement->execute();
@@ -32,17 +30,15 @@ try {
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../Images/DjanamLogo.jfif">
-        <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Google Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap">
     <link rel="stylesheet" href="userReservationStyle.css">
-    <title>Document</title>
+    <title>Таблица с резервации| Djanam Sky Club</title>
 </head>
 <body>
  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">

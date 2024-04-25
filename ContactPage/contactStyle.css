@@ -1,4 +1,4 @@
-/* Общи стилове */
+
 body {
     margin: 0;
     padding: 0;
@@ -37,7 +37,6 @@ body {
     color: #e84a5f;
 }
 
-/* Стилове за формата */
 .hero {
     display: flex;
     justify-content: center;
@@ -49,9 +48,9 @@ body {
 }
 
 .form-container {
-    height: auto; /* промяна: автоматична височина */
-    width: 500px; /* промяна: увеличаване на широчината */
-    max-width: 90%; /* промяна: ограничаване на максималната широчина */
+    height: auto; 
+    width: 500px; 
+    max-width: 90%; 
     background-color: rgba(0, 0, 0, 0.6);
     position: absolute;
     transform: translate(-50%, -50%);
@@ -92,7 +91,7 @@ form h3 {
 
 input,
 textarea {
-    flex: 1; /* промяна: разширява се за заемане на останалото пространство */
+    flex: 1; 
     background-color: rgba(255, 255, 255, 0.01);
     border-radius: 3px;
     padding: 10px;
@@ -103,7 +102,7 @@ textarea {
 
 textarea {
     height: 150px;
-    resize: none; /* промяна: забранява се промяната на размера */
+    resize: none; 
 }
 
 ::placeholder {
@@ -111,8 +110,8 @@ textarea {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    pointer-events: none; /* промяна: placeholder не е кликателен */
-    left: 35px; /* промяна: отместване на ляво */
+    pointer-events: none; 
+    left: 35px; 
 }
 
 input:hover,

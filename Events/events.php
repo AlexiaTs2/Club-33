@@ -6,16 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Бъдещи събития | Djanam Sky Club</title>
     <link rel="icon" type="image/x-icon" href="../Images/DjanamLogo.jfif">
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap">
     <link rel="icon" type="image/x-icon" href="../Images/DjanamLogo.jfif">
     <link rel="stylesheet" href="eventsStyle.css">
 </head>
 
 <body>
-    <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
         <a class="navbar-brand" href="../IndexPage/index.php">
@@ -34,13 +31,9 @@
                     <a class="nav-link" href="../Gallery/gallery.php">Галерия</a>
                 </li>
                 <?php
-                // Стартиране на сесията
                 session_start();
-                // Проверка дали потребителят е логнат
                 if(isset($_SESSION['user'])) {
-                    // Проверка дали ролята на потребителя е администратор
                     if($_SESSION['user']['RoleID'] == 2) {
-                        // Показване на администраторския панел в навигационния бар
                         echo '<li class="nav-item">
                                 <a class="nav-link" href="../AdminPanel/adminPage.php">Админ-панел</a>
                               </li>';
@@ -62,7 +55,6 @@
                     <a class="nav-link" href="../LoginPage/login.php">Вход</a>
                 </li>
                 <?php endif; ?>
-                <!-- Добавяне на линк за контакти -->
                 <li class="nav-item">
                     <a class="nav-link" href="../ContactPage/contact.php">Контакти</a>
                 </li>
@@ -71,7 +63,6 @@
     </div>
 </nav> 
 
-    <!-- Hero section -->
     <header class="hero">
         <div class="container">
             <h1 class="display-3">Бъдещи събития</h1>
@@ -79,11 +70,10 @@
         </div>
     </header>
 
-    <!-- Events section -->
     <section class="events-section">
         <div class="container">
             <div class="row">
-                <!-- Event 1 -->
+
                 <div class="col-md-4">
                     <div class="card event-card">
                         <img src="../Images/Event4.jpg" class="card-img-top" alt="Концерт на открито">
@@ -93,7 +83,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Event 2 -->
+
                 <div class="col-md-4">
                     <div class="card event-card">
                         <img src="../Images/Event5.jpg" class="card-img-top" alt="Семейно събитие">
@@ -103,7 +93,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Event 3 -->
+
                 <div class="col-md-4">
                     <div class="card event-card">
                         <img src="../Images/Event6.jpg" class="card-img-top" alt="Вечеря с изглед към залеза">
@@ -113,7 +103,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Event 4 -->
+
                 <div class="col-md-4">
                     <div class="card event-card">
                         <img src="../Images/Event7.jpg" class="card-img-top" alt="Вкусно изкушение">
@@ -123,7 +113,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Event 5 -->
+                
                 <div class="col-md-4">
                     <div class="card event-card">
                         <img src="../Images/Event8.jpg" class="card-img-top" alt="Кулинарен майсторски клас">
@@ -133,7 +123,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Event 6 -->
+                
                 <div class="col-md-4">
                     <div class="card event-card">
                         <img src="../Images/Event9.jpg" class="card-img-top" alt="Веган фестивал">
@@ -147,14 +137,12 @@
         </div>
     </section>
 
-    <!-- Footer section -->
     <footer class="footer">
         <div class="container">
             <p>&copy; 2024 Djanam Sky Club. Всички права запазени.</p>
         </div>
     </footer>
 
-    <!-- Bootstrap JS bundle (including Popper.js) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
