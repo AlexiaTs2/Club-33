@@ -14,6 +14,7 @@ if(isset($_POST['submit'])){
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $message = $_POST['message'];
+    $subject = $_POST['subject'];
 
     $mail = new PHPMailer(true);
     
@@ -40,9 +41,9 @@ if(isset($_POST['submit'])){
         $mail->addAddress('19202@uktc-bg.com');
 
         $mail->isHTML(true);
-        $mail->Subject = 'Inquiry from-'.$name;
+        $mail->Subject = 'Subject:'.$subject;
         // Генерираме тялото на имейла със стойностите от формата
-        $mail->Body    = '<p>About sender: '.$name.'</p><br>Email: '.$email.'<br>Phone: '.$phone.'<br>About: '.$message.'<br>';
+        $mail->Body    = '<p>Име: '.$name.'</p><br>Имейл: '.$email.'<br>Телефон: '.$phone.'<br>Съобщение: '.$message.'<br>';
         $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
     
         $mail->send();

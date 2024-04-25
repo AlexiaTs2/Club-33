@@ -84,7 +84,9 @@
                 <div class="inputbox"><ion-icon name="call-outline"></ion-icon>
                     <input type="text" placeholder="Телефон" name="phone" id="phone" required>
                 </div>
-
+                <div class="inputbox"><ion-icon name="pencil-outline"></ion-icon>
+                   <input type="text" placeholder="Тема на съобщението" name="subject" id="subject" required>
+                </div>
                 <div class="inputbox"><ion-icon name="chatbubble-outline"></ion-icon>
                     <textarea placeholder="Съобщение" name="message" id="message" required></textarea>
                 </div>
