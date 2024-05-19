@@ -22,7 +22,7 @@ if(isset($_POST['submit'])){
         $mail->Host       = 'smtp.gmail.com';                     
         $mail->SMTPAuth   = true;                                   
         $mail->Username   = '19202@uktc-bg.com';                 
-        $mail->Password   = 'wmgwitvipslyxtnm';                        
+        $mail->Password   = 'btqyrntawptqhvgj';                        
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            
         $mail->Port       = 587;                                   
     
@@ -45,7 +45,7 @@ if(isset($_POST['submit'])){
     
         $mail->send();
         echo '<script>alert("You have successfully sent your inquiry")</script>';
-        header("Location: http://localhost/FinalProject/IndexPage/index.php");
+        header("Location: http://localhost/Djanam-Sky-Club/IndexPage/index.php");
         exit();
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
